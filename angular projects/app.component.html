@@ -1,0 +1,116 @@
+
+
+
+<div class="box">
+<app-login></app-login>
+<app-login></app-login>
+<app-login></app-login>
+<app-login></app-login>
+</div>
+
+<button (click)="getN()">click me</button>
+<input type="text" (keyup)="getN()" />
+<input type="text" (keydown)="getdown()"/>
+<button (dblclick)="eventCallFunction('Button Double Click')">click here</button> 
+
+
+<input type="text" [value]="name" [disabled]="disablebox">
+<button (click)="enableInput()">click here</button>
+<h1>---------------------------------------------------------------------</h1>
+
+
+
+<input type="text" [placeholder]="pholder">
+<button (click)="changepholder()">click me</button>
+
+<h1>----------------------------------------------------------------------</h1>
+
+
+
+<h1 *ngIf="isLoggedIn  else loggedOut">
+    Hii Welcome
+</h1>
+<ng-template #loggedOut>
+    please, login
+</ng-template>
+
+<h1>App</h1>
+<app-user-list></app-user-list>
+
+<h1>---------------------------------------------------------------------</h1>
+
+
+<h1 *ngIf="day=='today' else elseBlock">Today</h1>
+<ng-template #elseBlock>
+    <h1>Hi</h1>
+</ng-template>
+
+<h1 *ngIf="isLoggedIn  else loggedOut">
+    Hii Welcome
+</h1>
+<ng-template #loggedOut>
+    please, login
+</ng-template>
+
+<h3 *ngFor="let name of names">
+    {{name.fName}}
+    {{name.age}}
+</h3>
+<h3 [ngSwitch]="Colors">
+    <h3 *ngSwitchCase="'Red'">Red</h3>
+    <h3 *ngSwitchCase="'Blue'">Blue</h3>
+    <h3 *ngSwitchCase="'Green'">Green</h3>
+    <h3 *ngSwitchCase="'Yellow'">Yellow</h3>
+    <h3 *ngSwitchDefault>No Color</h3> 
+</h3>
+
+
+<h1>--------------------------------------------------------------</h1>
+
+<h1 style="color:aqua">Hi World</h1>
+<h1 [ngStyle]="{'color':'Red'}">Hello</h1>
+<h1 [ngStyle]="{'color':textColor}">Hi Hello</h1>
+<h1 [ngStyle]="{'background-color':bgColor==='black'?'black':'gray'}">Hi</h1>
+
+<h1>------------------------------------------------------------------------</h1>
+
+<h1 [ngClass]="'changeColor'">Hi All </h1>
+<h1 [ngClass]="'changeColor bgColor'">Hello All</h1>
+<h1 [ngClass]="styleColor">Hi All</h1>
+<h1 [ngClass]="styleColor==='font'?'bgColor':'changeColor'">Hello All</h1>
+
+
+
+
+<h1>------------------------------------------------------------------------------</h1>
+<h1 appHighlight>Hello</h1>
+<!-- <h1>{{'UPPER' | lowercase}}</h1>
+<h1>{{'lower' | uppercase}}</h1>
+<h1>{{'123' | currency}}</h1>
+<h1>{{dataExample | date}}</h1>
+<h1>{{'0.50' | percent}}</h1>
+
+<h1>{{'123 | currency:'GBP'}}</h1>
+<h1>{{dateExample | date:'long'}}</h1>
+<h1>{{dateExample | date:'short'}}</h1>
+<h1>{{dateExample | date:'dd/MM/yy'}}</h1>
+<h1>{{'0.512'| date:'short'}}</h1>
+
+<h1>{{dateExample | date | uppercase}} </h1>
+<h1>{{'123' | currency:'YEN' | lowercase}}</h1> -->
+
+
+
+<!-- <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="fname" [(ngModel)]="fname" required minlength="3">
+    <br>
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname" [(ngModel)]="lname">
+    <br>
+    <label for="age">Age</label>
+    <input type="text" id="age" name="age" [(ngModel)]="age">
+    <br>
+    <input type="checkbox" id="terms" name="terms" [(ngModel)]="terms" required>I accept the terms & conditions
+    <button type="submit" [disabled]="ImyForm.valid">Submit</button>
+</form> -->

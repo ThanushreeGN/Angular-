@@ -1,0 +1,20 @@
+.box{
+    margin-left:5px;
+    width:300px;
+    height:500px;
+    background-color: aqua;
+    border:2px solid black;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.boxone{
+    padding: 10px;
+}
+.boxtwo{
+    padding: 10px;
+}
+.boxthree{
+    padding: 10px;
+}
